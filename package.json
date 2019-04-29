@@ -23,7 +23,6 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "normalize.scss": "^0.1.0"
+    "normalize.css": "^8.0.1"
   }
 }
