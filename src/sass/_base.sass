@@ -1,0 +1,48 @@
+@import "vars"
+@import "../../node_modules/normalize.css/normalize"
+@import "fonts"
+
+*
+	box-sizing: border-box
+	&::before, &::after
+		box-sizing: border-box
+html, body
+	margin: 0
+	padding: 0
+	height: 100%
+body
+	min-width: 320px
+	position: relative
+	line-height: 163%
+	font-family: $text-Regular
+	font-size: 16px
+	color: $default-color
+	background-color: #E5E5E5
+	overflow-x: hidden
+	input, textarea
+		border: none
+		outline: none
+ul, li
+	margin: 0
+	padding: 0
+	list-style-type: none
+::placeholder
+	color: #fff
+	opacity: 0.3
+.img-responsive
+	display: block
+	width: 100%
+	height: auto
+br
+	display: none
+a
+	text-decoration: none
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-family: $title-Regular
+	font-weight: normal
+	letter-spacing: -0.02em
+p
+	margin: 0
+
+

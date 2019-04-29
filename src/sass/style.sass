@@ -1,0 +1,373 @@
+@import "base"
+
+.wrap
+	margin: 0 auto
+	max-width: 1440px
+	background-color: #fff
+.main-header
+	padding-top: 167px
+	padding-bottom: 126px
+	min-height: 480px
+	position: relative
+.header-box
+	margin: 0 auto
+	padding: 0 20px
+	max-width: 760px
+	text-align: center
+.main-title
+	margin-bottom: 20px
+	line-height: 54px
+	font-size: 34px
+.main-desc
+	margin-bottom: 33px
+	line-height: 26px
+	font-family: $text-Regular
+	color: $text-color1
+	span
+		font-family: $text-Bold
+		color: $accent-color
+.btn
+	padding: 0
+	text-transform: uppercase
+	font-family: $link-ExtraBold
+	font-weight: 800
+	border: none
+	background-color: transparent
+	cursor: pointer
+	&:focus
+		outline: none
+.btn-scroll
+	position: relative
+	margin-left: 35px
+	padding-top: 18px
+	padding-right: 30px
+	padding-bottom: 16px
+	padding-left: 46px
+	min-width: 236px
+	line-height: 1.25
+	font-size: 16px
+	color: $default-color
+	letter-spacing: 0.02em
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 20px
+		left: 20px
+		display: inline-block
+		width: 14px
+		height: 14px
+		background-image: url(../img/icon-plus.svg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		transition: all $transition
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		display: inline-block
+		width: 54px
+		height: 54px
+		background-color: #878787
+		border-radius: 111px
+		transition: width $transition
+		opacity: 0.05
+		z-index: -1
+	&:hover
+		&::before
+			transform: rotate(360deg)
+		&::after
+			width: 100%
+
+.hints-section
+	padding-bottom: 80px
+	background-color: $bg-section
+.hints-img
+	width: 100%
+	height: 600px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+.hints-box
+	margin-top: -99px
+	margin-left: 20px
+	margin-right: 20px
+	outline: 1px solid #ededed
+.hint-item
+	padding: 20px 30px 30px
+	background-color: #fff
+	border: 1px solid #ededed
+.hint-title
+	margin-bottom: 15px
+	line-height: 1.58
+	font-family: $title-Bold
+	font-size: 12px
+	font-weight: bold
+	letter-spacing: 0.04em
+	color: $accent-color
+	text-transform: uppercase
+.hint-desc
+	line-height: 1.25
+	font-family: $title-Regular
+	font-size: 20px
+	letter-spacing: -0.03em
+.similar-section
+	padding-top: 79px
+	padding-bottom: 77px
+	p
+		margin-bottom: 28px
+		color: $text-color2
+.similar-box
+	margin-left: 20px
+	margin-right: 20px
+.similar-title
+	margin-bottom: 23px
+	line-height: 1.25
+	font-size: 48px
+.privilege-section
+	padding: 120px 20px 163px
+	background-color: $bg-section
+.privilege-section-title
+	margin-bottom: 60px
+	line-height: 1.25
+	font-size: 40px
+	letter-spacing: -0.02em
+	text-align: center
+	color: #000
+.privilege-box
+	max-width: 728px
+.privilege-item
+	margin-bottom: 50px
+	text-align: center
+	&:last-child
+		margin-bottom: 0
+.privilege-title
+	margin-bottom: 25px
+	line-height: 1.25
+	font-family: $title-Bold
+	font-size: 20px
+	letter-spacing: normal
+	color: #000
+	&::before
+		content: ''
+		margin-bottom: 30px
+		display: block
+		margin-left: auto
+		margin-right: auto
+		width: 52px
+		height: 52px
+		background-image: url(../img/icon-purse.svg)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+	&::after
+		content: ''
+		margin-top: 23px
+		display: block
+		margin-left: auto
+		margin-right: auto
+		width: 24px
+		height: 2px
+		background-color: $accent-color
+.privilege-desc
+	color: $text-color2
+.main-footer
+	padding-top: 98px
+	padding-bottom: 121px 
+	color: #fff
+	background-color: #161616
+.footer-box
+	margin-left: 20px
+	margin-right: 20px
+.form-title
+	margin-bottom: 72px
+	line-height: 1.3
+	font-size: 32px
+	text-align: center
+.feedback
+	margin: 0 auto
+	max-width: 575px
+.form-item
+	margin-bottom: 67px
+	position: relative
+	&:last-of-type
+		margin-bottom: 61px
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		height: 2px
+		background-color: #F7F8FA
+		opacity: 0.1
+		transition: all $transition
+	&.error
+		.error-box
+			display: block
+			opacity: 1
+		&::after
+			background-color: $error-color
+			opacity: 0.8
+		.num
+			color: $error-color
+			&::before
+				border: 1px solid $error-color
+				opacity: 0.8
+	&.no-error
+		.error-box
+			display: none
+			opacity: 0
+		&::after
+			background-color: $no-error-color
+			opacity: 0.7
+		.num
+			color: $no-error-color
+			opacity: 0.6
+			&::before
+				border: 1px solid $no-error-color
+				opacity: 0.8
+
+.error-box
+	display: none
+	opacity: 0
+	position: absolute
+	bottom: -25px
+	left: 0
+	width: 100%
+	font-size: 12px
+	color: $error-color
+	text-align: center
+	transition: all $transition
+.num
+	display: none
+	position: absolute
+	left: -82px
+	top: -19px
+	width: 64px
+	height: 64px
+	line-height: 64px
+	font-family: $text-Medium
+	font-size: 20px
+	text-align: center
+	color: $accent-color
+	transition: all $transition
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		display: inline-block
+		width: 64px
+		height: 64px
+		border: 1px solid #fff
+		border-radius: 32px
+		opacity: 0.23
+		transition: all $transition
+.control-title
+	margin-bottom: 11px
+	display: block
+	line-height: 25px
+	font-family: $title-Bold
+	font-size: 16px
+	letter-spacing: -0.01em
+.form-control
+	margin-bottom: 4px
+	padding: 12px 0
+	display: block
+	width: 100%
+	line-height: 1.46
+	font-family: $text-Regular
+	font-size: 24px
+	letter-spacing: -0.01em
+	color: #fff
+	background-color: transparent
+	opacity: 0.3
+	&:focus
+		outline-offset: 0
+		opacity: 0.7
+textarea.form-control
+	resize: none
+	overflow: hidden
+.btn-message
+	padding-top: 20px
+	padding-bottom: 16px
+	display: block
+	width: 100%
+	max-width: 574px
+	font-size: 14px
+	letter-spacing: 0.04em
+	color: $accent-color
+	border-radius: 111px
+	background-color: #fff
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
+
+.popup-message
+	display: none
+	padding: 0 20px
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	justify-content: center
+	align-items: center
+	background-color: $bg-section
+	transition: opacity $transition
+	opacity: 0
+	&.active
+		display: flex
+		opacity: 1
+		z-index: 100
+.popup-box
+	padding: 50px 20px
+	position: relative
+	min-width: 70%
+	min-height: 50vh
+	height: 50vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	text-align: center
+	color: $accent-color
+	background-color: #fff
+	border: 1px solid $accent-color
+	h3
+		margin-bottom: 20px
+		line-height: 1.25
+		font-size: 32px
+.close-btn
+	position: absolute
+	top: 15px
+	right: 15px
+	width: 30px
+	height: 30px
+	overflow: hidden
+	z-index: 10
+	&::before, &::after
+		content: ''
+		display: block
+		position: absolute
+		top: 15px
+		left: 0
+		width: 30px
+		height: 2px
+		border-radius: 1px
+		background-color: $accent-color
+		opacity: 0.75
+		transition: opacity $transition
+		z-index: 1
+	&::before
+		transform: rotate(45deg)
+	&::after
+		transform: rotate(-45deg)
+	&:hover
+		opacity: 1
+
+
+
+
+
+@import "media"
+

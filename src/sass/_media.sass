@@ -1,0 +1,83 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	//
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px)
+	.main-title
+		font-size: 48px
+	.similar-box
+		margin-left: 80px
+		margin-right: 80px
+	.hint-item
+		padding: 47px 60px 60px
+		min-height: 232px
+	.hint-desc
+		font-size: 24px
+	.footer-box
+		padding-left: 92px
+	.form-title
+		margin-bottom: 81px
+		font-size: 40px
+	.num
+		display: block
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.hints-box
+		margin-left: auto
+		margin-right: auto
+		max-width: 728px
+	.similar-box
+		margin-left: auto
+		margin-right: auto
+		max-width: 606px
+	.privilege-box
+		margin-left: auto
+		margin-right: auto
+		max-width: 728px
+	.num
+		left: -92px
+	/* Medium Devices, Desktops */
+@media only screen and (min-width : 1024px)
+	.none-1024
+		display: inline-block
+	.header-box
+		padding: 0
+	.hints-box
+		max-width: 972px
+		display: flex
+		flex-flow: row wrap
+	.hint-item
+		max-width: 486px
+		flex-basis: 486px
+	.similar-box
+		max-width: 774px
+		padding-left: 1px
+	.privilege-box
+		max-width: 100%
+		display: flex
+		justify-content: space-between
+	.privilege-item
+		margin-bottom: 0
+		flex-basis: 31%
+		text-align: left
+		&:last-child
+			margin-right: 0
+	.privilege-title
+		&::before, &::after
+			margin-left: 0
+			margin-right: 0
+	.footer-box
+		padding-left: 1px
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1210px)
+	.privilege-box
+		margin-left: auto
+		margin-right: auto
+		max-width: 1170px
+	.privilege-item
+		flex-basis: 376px
+	.none-1200
+		display: inline-block
